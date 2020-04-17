@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: isuruluckytest 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: isuruluckytest 
+    spec:
+      containers:
+        - name: isuruluckytest 
+          image: choreopoc.azurecr.io/isuruluckytest
+          ports:
+          - containerPort: 9091
